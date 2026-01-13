@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans | BASE Gym Indore</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-red: #ff3e3e;
+      --bg-dark: #111111;
+      --card-bg: #1c1c1c;
+      --text-gray: #b5b5b5;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #fff;
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+    }
+
+    .pricing {
+      padding: 80px 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-subtitle {
+      color: var(--primary-red);
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Catamaran', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    /* Pricing Card Styling */
+    .pricing-card {
+      background: var(--card-bg);
+      padding: 40px 30px;
+      border-radius: 15px;
+      border: 1px solid #333;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary-red);
+    }
+
+    /* Highlighted card for the Best Value (12 Months) */
+    .pricing-card.highlighted {
+      border: 2px solid var(--primary-red);
+      transform: scale(1.05);
+      z-index: 2;
+    }
+
+    .pricing-card.highlighted::before {
+      content: "BEST VALUE";
+      background: var(--primary-red);
+      color: #fff;
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .card-header .duration {
+      font-family: 'Catamaran', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .unit { font-size: 1rem; color: var(--text-gray); }
+
+    .price-box del { color: #666; font-size: 1.2rem; }
+    
+    .price {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 5px 0;
+    }
+
+    .monthly-price { color: var(--primary-red); font-size: 0.9rem; margin-bottom: 25px; }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .features-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+      font-size: 0.95rem;
+      color: var(--text-gray);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 5px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+      border: none;
+      width: 100%;
+    }
+
+    .btn-secondary { background: transparent; border: 2px solid #fff; color: #fff; }
+    .btn-secondary:hover { background: #fff; color: #000; }
+
+    .btn-primary { background: var(--primary-red); color: #fff; }
+    .btn-primary:hover { background: #d32f2f; }
+
+    /* Free Trial Box */
+    .free-trial-box {
+      background: linear-gradient(90deg, #222, #333);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .free-trial-box h3 { font-size: 1.8rem; margin-bottom: 10px; }
+    .free-trial-box p { color: var(--text-gray); margin-bottom: 25px; }
+    .free-trial-box .btn { width: auto; }
+
+    @media (max-width: 768px) {
+      .pricing-card.highlighted { transform: scale(1); }
+      .section-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="section pricing" id="pricing" aria-label="pricing">
+      <div class="container">
+
+        <p class="section-subtitle">Membership Plans</p>
+        <h2 class="h2 section-title text-center">Choose Your Gym Pass</h2>
+
+        <div class="pricing-grid">
+
+          <div class="pricing-card highlighted">
+            <div class="card-header">
+              <div class="duration">12 <span class="unit">MONTHS</span></div>
+              <div class="price-box">
+                <del>₹47,140</del>
+                <span class="price">₹16,990</span>
+                <p class="monthly-price">₹1416 per month*</p>
+              </div>
+            </div>
+            <ul class="features-list">
+              <li>+ Extra ₹1,750 OFF applied</li>
+              <li>+ Free Kickstart Onboarding Pack</li>
+              <li>+ 60 days of membership pause</li>
+              <li>+ Access 60 sessions in other cities</li>
+              <li>+ 5 swimming sessions</li>
+              <li>+ Free membership transfer</li>
+            </ul>
+            <button class="btn btn-primary">BUY NOW</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="card-header">
+              <div class="duration">6 <span class="unit">MONTHS</span></div>
+              <div class="price-box">
+                <del>₹25,105</del>
+                <span class="price">₹13,890</span>
+                <p class="monthly-price">₹2315 per month*</p>
+              </div>
+            </div>
+            <ul class="features-list">
+              <li>+ Extra ₹1,500 OFF applied</li>
+              <li>+ Free Kickstart Onboarding Pack</li>
+              <li>+ 30 days of membership pause</li>
+              <li>+ Access 30 sessions in other cities</li>
+              <li>+ 2 swimming sessions</li>
+              <li>+ Standard support</li>
+            </ul>
+            <button class="btn btn-secondary">BUY NOW</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="card-header">
+              <div class="duration">3 <span class="unit">MONTHS</span></div>
+              <div class="price-box">
+                <del>₹14,081</del>
+                <span class="price">₹10,290</span>
+                <p class="monthly-price">₹3430 per month*</p>
+              </div>
+            </div>
+            <ul class="features-list">
+              <li>+ Extra ₹1,000 OFF applied</li>
+              <li>+ Free Kickstart Onboarding Pack</li>
+              <li>+ 10 days of membership pause</li>
+              <li>+ 1000+ workout videos</li>
+              <li>+ ₹500 OFF on gear</li>
+            </ul>
+            <button class="btn btn-secondary">BUY NOW</button>
+          </div>
+
+        </div>
+
+        <div class="free-trial-box">
+            <h3>Nahi pata kaunsa choose karein?</h3>
+            <p>Ek baar trial lekar dekho! No strings attached.</p>
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20BASE%20Gym,%20I%20want%20to%20book%20a%20free%20trial" class="btn btn-primary">Book Free Trial</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
